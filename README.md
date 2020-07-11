@@ -1,6 +1,6 @@
 # FriendFinder
 
-### Try the app
+### Try the working app
 
 https://still-taiga-48088.herokuapp.com/
 
