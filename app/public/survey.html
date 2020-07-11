@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>FriendFinder</title>
+	<!-- jquery -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<!-- Latest compiled and minified CSS and JS for bootstrap -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<!-- Optional theme bootstrap -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+</head>
+<body>
+	<!-- container -->
+	<div class="container">
+		<!-- survey questions header ended by horizontal row -->
+		<h2>Survey Questions</h2>
+		<hr>
+
+		<!-- about you header section ended with horizontal row -->
+		<h3><strong>About You</strong></h3>
+		<!-- name area with input -->
+		<h4>Name (Required)</h4>
+		<input type="text" name="" id="name" class="form-control" required>
+		<!-- photo area with input -->
+		<h4>Link to Photo Image (Required)</h4>
+		<input type="text" name="" id="photo" class="form-control" required>
+		<hr>
+
+		<!-- begin questions. all questions have format h4 for q, with a select dropdown and 6 options, each with id q1, q2 etc etc-->
+		<h3><strong>Question 1</strong></h3>
+		<h4>You find it easy to stay relaxed and focused even when there is some pressure.</h4>
+	 	<select class="select-drop" id="q1">
+	 		<!-- first option empty so select bar defaults to 'select option' -->
+	 		<!-- all options have value attributes equal to the number they represent, this will be used in the script at the bottom of this file for saving/creating data array -->
+	 		<option value=""></option>
+      <option value="1">1 (Strongly Disagree)</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5 (Strongly Agree)</option>
+    </select>
+
+		<h3><strong>Question 2</strong></h3>
+		<h4>You think that everyone’s views should be respected regardless of whether they are supported by facts or not.</h4>
+	 	<select class="select-drop" id="q2">
+	 		<option value=""></option>
+      <option value="1">1 (Strongly Disagree)</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5 (Strongly Agree)</option>
+    </select>
+
+		<h3><strong>Question 3</strong></h3>
+		<h4>You would enjoy being involved in a vibrant art and music scene.</h4>
+	 	<select class="select-drop" id="q3">
+	 		<option value=""></option>
+      <option value="1">1 (Strongly Disagree)</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5 (Strongly Agree)</option>
+    </select>
+
+		<h3><strong>Question 4</strong></h3>
+		<h4>You would travel to a nearby country spontaneously in a quick and cheap manner if the opportunity presented itself.</h4>
+	 	<select class="select-drop" id="q4">
+	 		<option value=""></option>
+      <option value="1">1 (Strongly Disagree)</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5 (Strongly Agree)</option>
+    </select>
+
+		<h3><strong>Question 5</strong></h3>
+		<h4>You want to live in a place with a rich cultural history.</h4>
+	 	<select class="select-drop" id="q5">
+	 		<option value=""></option>
+      <option value="1">1 (Strongly Disagree)</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5 (Strongly Agree)</option>
+    </select>
+
+		<h3><strong>Question 6</strong></h3>
+		<h4>Generally speaking, you rely more on your experience than your imagination.</h4>
+	 	<select class="select-drop" id="q6">
+	 		<option value=""></option>
+      <option value="1">1 (Strongly Disagree)</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5 (Strongly Agree)</option>
+    </select>
+
+		<h3><strong>Question 7</strong></h3>
+		<h4>You're fine with spiders, snakes, and other critters of that nature.</h4>
+	 	<select class="select-drop" id="q7">
+	 		<option value=""></option>
+      <option value="1">1 (Strongly Disagree)</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5 (Strongly Agree)</option>
+    </select>
+
+		<h3><strong>Question 8</strong></h3>
+		<h4>Your mind is always buzzing with unexplored ideas and plans.</h4>
+	 	<select class="select-drop" id="q8">
+	 		<option value=""></option>
+      <option value="1">1 (Strongly Disagree)</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5 (Strongly Agree)</option>
+    </select>
+
+		<h3><strong>Question 9</strong></h3>
+		<h4>You want to be able to walk or bike everywhere you go.</h4>
+	 	<select class="select-drop" id="q9">
+	 		<option value=""></option>
+      <option value="1">1 (Strongly Disagree)</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5 (Strongly Agree)</option>
+    </select>
+
+		<h3><strong>Question 10</strong></h3>
+		<h4>You are an adventurous eater who will eat anything at least once.</h4>
+	 	<select class="select-drop" id="q10">
+	 		<option value=""></option>
+      <option value="1">1 (Strongly Disagree)</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5 (Strongly Agree)</option>
+    </select>
+
+    <!-- line breaks -->
+		<br>
+		<br>
+
+		<!-- Submit Button -->
+		<button type="submit" class="btn btn-primary btn-lg btn-block" id="submit"><i class="fa fa-check-circle" aria-hidden="true"></i>Submit</button>
+		<hr>
+
+		<!-- footer with link to api friends list and my github repo -->
+	  <footer class="footer">
+	    <div class="container">
+		      <p><a href="/api/friends">API Friends List</a> | <a href="https://github.com/sicnarf8888/FriendFinder">GitHub Repo</a></p>
+	    </div>
+	  </footer>
+	<!-- close container -->
+	</div>
+
+	<!-- pop up modal for results/most compatible -->
+	<div id="resultsModal" class="modal fade" role="dialog">
+	  <div class="modal-dialog">
+	    <!-- content-->
+	    <div class="modal-content">
+	    	<!-- header for Best Math -->
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal">&times;</button>
+	        <h2 class="modal-title"><strong>Best Match</strong></h2>
+	      </div>
+	      <!-- body displays name and picture of match -->
+	      <div class="modal-body">
+	        <h2 class="text-center" id="bfName"></h2>
+	        <!-- centering and making image responsive to parent element -->
+	        <img class="img-responsive center-block" id="bfImg" src="" alt="">
+	      </div>
+	      <!-- footer is a close button -->
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+	
+	<!-- jquery for submitting/toggling modal -->
+  <script type="text/javascript">
+    // save the form inputs when submit button clicked
+    $("#submit").on("click", function(){
+    	// create validation function
+    	// validate that all q's, name, and image link have been provided
+    	function validateInput() {
+    		// create a filled out variable
+		  	var filledOut = true;
+		  	// for the name/image, if either input is empty, set filledOut to false
+		 	  $('.form-control').each(function() {
+		      if ( $(this).val() === "" )
+		        filledOut = false;
+		 		});
+		 		// for the 1-5 answers, if any input is empty, set filledOut to false
+		  	$('.select-drop').each(function() {
+		  	  if( $(this).val() === "")
+		  		  filledOut = false
+		  	})
+		  	// the function returns the filled out value. if neither of the above two criteria are met (all inputs filled out), it will return true
+		 		return filledOut;
+			}
+
+			// if validate form returns true, continue
+			if (validateInput() == true) {
+				// Create an object for the user's data that we will send to the friends.js file upon posting by grabbing the vals from the form/q inputs
+		    var userData = {
+		    	name: $("#name").val(),
+		    	photo: $("#photo").val(),
+		    	scores: [$("#q1").val(), $("#q2").val(), $("#q3").val(), $("#q4").val(), $("#q5").val(), $("#q6").val(), $("#q7").val(), $("#q8").val(), $("#q9").val(), $("#q10").val()]
+		    };
+
+		    // Grab the origin URL of the website
+		    // cannot simply do localhost:8080 as this will end up being deployed and not necesarilly existing only on localhost:8080
+		    var currentURL = window.location.origin;
+	    	// post the userData object to /api/friends, add a callback function for displaying the modal after data is posted
+	    	$.post(currentURL + "/api/friends", userData, function(data){
+	    		console.log(data);
+	    		// data is the json response of the best friend - code within apiRoutes lines 23 - 64
+	    		// adding text for the name
+	    		$("#bfName").text(data.name);
+	    		// changing image source for photo
+	    		$('#bfImg').attr("src", data.photo);
+		    	// once data posted and best match info populated, toggle modal on
+		    	$("#resultsModal").modal('toggle');
+	    	});
+	    	// if validate function returns false, alert user to fill out all fields
+			} else {
+					alert("Please fill out all fields prior to submitting. Thanks!");
+			}
+    });
+  </script>
+</body>
+</html>
